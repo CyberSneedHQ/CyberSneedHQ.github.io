@@ -1,1 +1,9 @@
+title: CyberSneedHQ.github.io
 
+#logo
+
+description: Hello World! I’m Hunter Sneed. I’ve been exploring the cybersecurity realm for over five years. Through a journey of learning at different schools, earning certifications, and tackling CTF challenges, I discovered my passion in the DFIR (Digital Forensics and Incident Response) world. While I’m always growing and learning, I’ve built a large collection of notes from my failures and successes. I created this repository to take my knowledge to the next level and to give back to the cybersecurity community that has helped me immensely along the way. This site is where I share what I’m working on, my thoughts, and resources that might be useful to anyone interested in cyber defense. Whether you’re another security professional, a recruiter, or simply curious, I hope you find something valuable here. Feel free to check out my blog, projects, or just say hi! Dont forget to connect with me on linked in.
+
+#show_downloads: true
+
+theme: jekyll-theme-minimal
