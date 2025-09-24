@@ -1,6 +1,6 @@
 CyberSneedHQ
 
-[LinkedIn:](www.linkedin.com/in/hunter-sneed)
+[LinkedIn:](https://www.linkedin.com/in/hunter-sneed)
 
 ### projects
 #### Project 1
