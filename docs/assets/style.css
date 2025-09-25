@@ -44,7 +44,7 @@ nav a:hover {
 /* === Layout (Two Columns) === */
 .layout {
   display: grid;
-  grid-template-columns: 4fr 1fr; /* left 2x wider */
+  grid-template-columns: 8fr 1fr; /* left 2x wider */
   gap: 2rem;
   max-width: 1200px;
   margin: 2rem auto;
