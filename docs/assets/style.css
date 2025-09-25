@@ -12,6 +12,11 @@ body {
   padding: 1rem;
   line-height: 1.6;
   font-family: 'Roboto',sans-serif;
+
+  /* Layout control */
+  max-width: 900px;   /* keeps content readable */
+  margin-left: 5%;    /* small buffer on the left */
+  margin-right: auto; /* pushes extra space to the right */
 }
 
 a {
@@ -21,4 +26,36 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* === Headings === */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* === Section Styling (optional cards) === */
+section {
+  background-color: var(--section-bg);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+
+/* === Images === */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem 0;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  body {
+    max-width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
