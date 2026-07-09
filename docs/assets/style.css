@@ -382,3 +382,28 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   * { animation: none !important; scroll-behavior: auto; }
   html { scroll-behavior: auto; }
 }
+
+
+/* ============================================================
+   AI DISCLAIMER
+   ============================================================ */
+.ai-note {
+  max-width: var(--maxw);
+  margin: 1rem auto 3rem;
+  padding: 0 2rem;
+}
+.ai-note-card {
+  background: var(--void-2);
+  border: var(--hairline);
+  border-left: 3px solid var(--iridescent);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.6rem;
+  box-shadow: var(--glow-purple);
+}
+.ai-note-card .eyebrow { color: var(--aqua); }
+.ai-note-card p {
+  margin: .6rem 0 0;
+  color: var(--text-dim);
+  font-size: .95rem;
+  max-width: 68ch;
+}
