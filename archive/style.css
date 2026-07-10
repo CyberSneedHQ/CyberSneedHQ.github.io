@@ -142,7 +142,7 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   flex-wrap: wrap;
   align-items: center;
   gap: 1.25rem;
-  padding: .1rem 2rem;
+  padding: .75rem 2rem;
   background: rgba(10,6,18,.82);
   backdrop-filter: blur(10px);
   border-bottom: var(--hairline);
@@ -151,9 +151,9 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
 .brand { display: flex; align-items: center; gap: .9rem; text-decoration: none; }
 
 .brand-logo {
-  width: 72px; height: 72px;
+  width: 144px; height: 144px;
   object-fit: contain;
-  filter: drop-shadow(0 0 6px rgba(62,240,168,.35));
+  filter: drop-shadow(0 0 8px rgba(62,240,168,.45));
 }
 
 .brand-title {

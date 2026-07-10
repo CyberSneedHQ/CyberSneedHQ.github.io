@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="CyberSneedHQ badge">
+  <title>CyberSneedHQ badge</title>
+  <g fill="#3ef0a8">
+  <path d="M 100.00,8.00 L 80.00,65.36 L 20.33,54.00 L 60.00,100.00 L 20.33,146.00 L 80.00,134.64 L 100.00,192.00 L 120.00,134.64 L 179.67,146.00 L 140.00,100.00 L 179.67,54.00 L 120.00,65.36 Z"/>
+  <circle cx="100.00" cy="6.00" r="11"/>
+  <circle cx="18.59" cy="53.00" r="11"/>
+  <circle cx="18.59" cy="147.00" r="11"/>
+  <circle cx="100.00" cy="194.00" r="11"/>
+  <circle cx="181.41" cy="147.00" r="11"/>
+  <circle cx="181.41" cy="53.00" r="11"/>
+  </g>
+  <circle cx="100" cy="100" r="52" fill="#3ef0a8"/>
+  <circle cx="100" cy="100" r="45" fill="#0a0612"/>
+  <circle cx="100" cy="100" r="41" fill="#3ef0a8"/>
+</svg>
