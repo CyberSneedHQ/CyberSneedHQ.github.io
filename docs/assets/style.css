@@ -151,14 +151,14 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
 .brand { display: flex; align-items: center; gap: .9rem; text-decoration: none; }
 
 .brand-logo {
-  width: 72px; height: 72px;
+  width: 65px; height: 65px;
   object-fit: contain;
   filter: drop-shadow(0 0 6px rgba(62,240,168,.35));
 }
 
 .brand-title {
   display: block;
-  height: 100px;
+  height: 150px;
   width: auto;
   max-width: none;
 }
