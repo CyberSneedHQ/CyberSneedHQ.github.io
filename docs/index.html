@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
+  <!-- molten warp filter for the liquid chrome hero text -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="molten">
+      <feTurbulence type="fractalNoise" baseFrequency="0.009 0.028" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
   <header class="site-header">
     <a class="brand" href="index.html">
       <img class="brand-logo" src="assets/logo_badge.png" alt="CyberSneedHQ badge logo" />
@@ -27,7 +34,7 @@
   </header>
   <section class="hero">
     <img class="badge" src="assets/logo_badge.png" alt="CyberSneedHQ sheriff badge" />
-    <h1>CYBERSNEED<span class="accent">HQ</span></h1>
+    <h1 data-text="CYBERSNEEDHQ">CYBERSNEED<span class="accent">HQ</span></h1>
     <p class="tagline">Home of the Cyber Space Cowboy</p>
   </section>
 
