@@ -12,7 +12,7 @@
     <a class="brand" href="index.html">
       <img class="brand-logo" src="assets/logo_badge.png" alt="CyberSneedHQ badge logo" />
       <span>
-        <span class="brand-name">CYBERSNEED<span class="hq">HQ</span></span>
+        <img class="brand-title" src="assets/title.svg" alt="cybersneedhq" />
         <span class="brand-tag">Home of the Cyber Space Cowboy</span>
       </span>
     </a>
@@ -25,9 +25,10 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <section class="hero">
-    <img class="badge" src="assets/logo.png" alt="CyberSneedHQ sheriff badge" />
-    <h1>CYBERSNEED<span class="accent">HQ</span></h1>
+    <img class="badge" src="assets/logo_badge.png" alt="CyberSneedHQ sheriff badge" />
+    <img class="hero-title" src="assets/title.svg" alt="cybersneedhq" />
     <p class="tagline">Home of the Cyber Space Cowboy</p>
   </section>
 
@@ -65,7 +66,8 @@
       </div>
     </aside>
   </main>
-<section class="ai-note" aria-label="AI disclaimer">
+
+  <section class="ai-note" aria-label="AI disclaimer">
     <div class="ai-note-card">
       <span class="eyebrow">On AI &amp; This Site</span>
       <p>
@@ -84,4 +86,24 @@
     <p>&copy; 2026 CyberSneedHQ &mdash; Hunter Sneed</p>
     <span class="eyebrow">The Cyber Space Cowboy</span>
   </footer>
-</body></html>
+
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+    <defs>
+      <filter id="ultra-chrome-match" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="4" result="blur" />
+        <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -11" result="liquid-base" />
+        
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise" />
+        <feDisplacementMap in="liquid-base" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="G" result="distorted-liquid" />
+        
+        <feSpecularLighting surfaceScale="7" specularConstant="2.8" specularExponent="18" lighting-color="#ffffff" in="distorted-liquid" result="specular-light">
+          <feDistantLight azimuth="240" elevation="40" />
+        </feSpecularLighting>
+        
+        <feComposite in="specular-light" in2="distorted-liquid" operator="in" result="chrome-highlights" />
+        <feBlend mode="screen" in="chrome-highlights" in2="SourceGraphic" />
+      </filter>
+    </defs>
+  </svg>
+</body>
+</html>
