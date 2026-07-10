@@ -126,13 +126,11 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
 /* Reference chrome title image */
 .hero-title {
     display: block;
-    width: min(720px, 90%);
+    width: min(1100px, 92%);
     height: auto;
     margin: 0 auto .4rem;
 }
-    /* filter: drop-shadow(0 4px 10px rgba(0,0,0,0.35)) drop-shadow(0 0 30px rgba(62,240,168,.30));
-}  */
-   
+
 /* ============================================================
    4. HEADER + NAV
    ============================================================ */
@@ -159,11 +157,9 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
 
 .brand-title {
   display: block;
-  height: 40px;
+  height: 56px;
   width: auto;
 }
-/* filter: drop-shadow(0 1px 2px rgba(0,0,0,.35)) drop-shadow(0 0 6px rgba(62,240,168,.3));
-} *\
 
 .brand-tag {
   display: block;
