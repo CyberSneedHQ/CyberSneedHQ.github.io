@@ -5,6 +5,7 @@
 
 /* ---- Fonts ---- */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Oswald:wght@300;500;700&family=Rajdhani:wght@400;500;600;700&display=swap');
+
 @font-face {
     font-family: 'Planet Kosmos';
     src: url('../fonts/PlanetKosmos.ttf') format('truetype');
@@ -12,6 +13,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 /* ============================================================
    1. TOKENS
    ============================================================ */
@@ -44,9 +46,8 @@
   --font-display: 'Orbitron', sans-serif;   /* chrome/tech headers */
   --font-western: 'Oswald', sans-serif;      /* condensed cowboy flavor */
   --font-body:    'Rajdhani', sans-serif;    /* Y2K-tech body */
-
   --font-y2k-chrome: 'Planet Kosmos', sans-serif;
-   
+
   --radius: 10px;
   --maxw: 1180px;
 }
@@ -122,42 +123,46 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   color: var(--chrome-dim);
 }
 
-/* ADD THIS RIGHT HERE: Perfect Liquid Chrome styling using our variables */
-.y2k-chrome-perfect {
+/* Advanced Reference Matching Liquid Chrome Design */
+.y2k-chrome-reference-match {
     font-family: var(--font-y2k-chrome);
-    font-size: clamp(3rem, 8vw, 6rem); /* Responsive sizing so it doesn't break mobile */
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0;
-    padding: 20px;
+    letter-spacing: -3px; /* Compressed letter metrics to create fluid junctions */
+    margin: 0 auto .4rem;
+    padding: 25px 10px;
     display: inline-block;
-    
-    /* Aggressive Y2K italics distortion */
-    transform: skewX(-12deg); 
+    transform: skewX(-8deg); 
 
-    /* High-contrast metallic liquid gradient */
-    background: linear-gradient(
-        to bottom,
-        #ffffff 0%,
-        #e5e5e5 35%,
-        #b0b0b0 44%,
-        #0a0a0a 46%, /* The sharp 'horizon line' mirror effect */
-        #575757 49%,
-        #efefef 55%,
-        #9c9c9c 75%,
-        #111111 100%
+    /* Environmental matrix mapping simulation */
+    background: repeating-linear-gradient(
+        145deg,
+        #ffffff 0px,
+        #f0f0f0 4px,
+        #8a8a8a 8px,
+        #111111 12px, 
+        #000000 15px,
+        #555555 18px,
+        #ffffff 24px, 
+        #e0e0e0 30px
     );
+    background-size: 200% 200%;
+    animation: chrome-sheen-shimmer 20s linear infinite;
     
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 
-    /* Links the text directly to the SVG filter in your index.html */
-    filter: url(#perfection-chrome-filter) drop-shadow(0 4px 15px rgba(0,0,0,0.7));
-    
-    /* Forces high-quality hardware acceleration rendering in Chrome */
+    /* Bind to HTML filter vector */
+    filter: url(#ultra-chrome-match) drop-shadow(0px 8px 22px rgba(0,0,0,0.9));
     -webkit-font-smoothing: antialiased;
-    backface-visibility: hidden;
+}
+
+@keyframes chrome-sheen-shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* ============================================================
@@ -189,7 +194,6 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   font-weight: 900;
   font-size: 1.15rem;
   letter-spacing: .06em;
-  /* chrome (A1) */
   background: linear-gradient(180deg,#ffffff 0%,#dfeef0 18%,#9fb4bc 40%,#5c7078 52%,#c8dde3 62%,#ffffff 78%,#8fa6ad 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
   filter: drop-shadow(0 1px 0 rgba(255,255,255,.3)) drop-shadow(0 1px 2px rgba(0,0,0,.7));
@@ -242,25 +246,13 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
 }
 @keyframes float { 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-10px);} }
 
-.hero h1 {
-  font-size: clamp(2.2rem, 6vw, 4rem);
-  margin: 0 0 .4rem;
-  /* chrome (A1) */
-  background: linear-gradient(180deg,#ffffff 0%,#dfeef0 18%,#9fb4bc 40%,#5c7078 52%,#c8dde3 62%,#ffffff 78%,#8fa6ad 100%);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-  filter: drop-shadow(0 2px 0 rgba(255,255,255,.25)) drop-shadow(0 3px 4px rgba(0,0,0,.75));
-}
-.hero h1 .accent {
-  background: linear-gradient(180deg,#eafff6 0%,#7ef0c0 30%,#26d8e8 55%,#1a9fb0 70%,#8ffbe0 100%);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-  text-shadow: none;
-}
 .hero .tagline {
   font-family: var(--font-western);
   text-transform: uppercase;
   letter-spacing: .3em;
   color: var(--aqua);
   font-size: clamp(.75rem, 2vw, 1rem);
+  margin-top: 10px;
 }
 
 /* ============================================================
@@ -282,7 +274,6 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   padding: 1.6rem 1.8rem;
   position: relative;
 }
-/* chrome top edge highlight */
 .card::before {
   content: "";
   position: absolute; inset: 0 0 auto 0; height: 2px;
@@ -295,7 +286,7 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
 .sidebar .card { background: var(--void-2); }
 
 /* ============================================================
-   7. MENU / LIST (tour-list style from reference)
+   7. MENU / LIST
    ============================================================ */
 .list { list-style: none; margin: 0; padding: 0; }
 .list li {
@@ -357,7 +348,6 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   padding: .15rem .6rem;
 }
 
-/* Article body (single post) */
 .article { max-width: 780px; margin: 2.5rem auto 4rem; padding: 0 2rem; }
 .article h2 { font-size: 2.1rem; }
 .article pre {
@@ -421,7 +411,6 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   * { animation: none !important; scroll-behavior: auto; }
   html { scroll-behavior: auto; }
 }
-
 
 /* ============================================================
    AI DISCLAIMER
