@@ -212,7 +212,7 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   letter-spacing: .3em;
   color: var(--aqua);
   font-size: clamp(.75rem, 2vw, 1rem);
-  margin-top: -5;
+  margin-top: 0;
 }
 
 /* ============================================================
