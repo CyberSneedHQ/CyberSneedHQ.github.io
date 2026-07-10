@@ -7,8 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Oswald:wght@300;500;700&family=Rajdhani:wght@400;500;600;700&display=swap');
 @font-face {
     font-family: 'Planet Kosmos';
-    src: url('./fonts/PlanetKosmos.woff2') format('woff2'),
-         url('./fonts/PlanetKosmos.ttf') format('truetype');
+    src: url('../fonts/PlanetKosmos.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
