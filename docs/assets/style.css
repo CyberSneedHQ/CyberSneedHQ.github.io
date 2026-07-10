@@ -200,7 +200,7 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   text-align: center;
 }
 .hero .badge {
-  width: 260px; height: auto; margin: 0 auto .1rem;
+  width: 260px; height: auto; margin: 0 auto .01rem;
   filter: drop-shadow(0 0 22px rgba(62,240,168,.4)) drop-shadow(0 0 40px rgba(168,85,247,.35));
   animation: float 6s ease-in-out infinite;
 }
@@ -212,7 +212,7 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   letter-spacing: .3em;
   color: var(--aqua);
   font-size: clamp(.75rem, 2vw, 1rem);
-  margin-top: 0;
+  margin-top: -5;
 }
 
 /* ============================================================
