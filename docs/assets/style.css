@@ -139,6 +139,7 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   top: 0;
   z-index: 50;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 1.25rem;
   padding: .75rem 2rem;
@@ -150,14 +151,14 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
 .brand { display: flex; align-items: center; gap: .9rem; text-decoration: none; }
 
 .brand-logo {
-  width: 56px; height: 56px;
+  width: 64px; height: 64px;
   object-fit: contain;
   filter: drop-shadow(0 0 8px rgba(62,240,168,.45));
 }
 
 .brand-title {
   display: block;
-  height: 56px;
+  height: clamp(56px, 8vw, 90px);
   width: auto;
 }
 
@@ -171,7 +172,7 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   color: var(--chrome-dim);
 }
 
-.site-nav { margin-left: auto; display: flex; gap: .35rem; flex-wrap: wrap; }
+.site-nav { margin-left: auto; display: flex; gap: .35rem; flex-wrap: wrap; flex-shrink: 0; }
 
 .site-nav a {
   font-family: var(--font-western);
@@ -183,6 +184,7 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   padding: .45rem .8rem;
   border-radius: 6px;
   border: 1px solid transparent;
+  white-space: nowrap;
 }
 .site-nav a:hover { color: var(--iridescent); border-color: rgba(62,240,168,.4); text-shadow: none; }
 .site-nav a.active { color: var(--void); background: var(--iridescent); box-shadow: var(--glow-green); }
@@ -197,7 +199,7 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   text-align: center;
 }
 .hero .badge {
-  width: 190px; height: auto; margin: 0 auto 1.5rem;
+  width: 260px; height: auto; margin: 0 auto 1.5rem;
   filter: drop-shadow(0 0 22px rgba(62,240,168,.4)) drop-shadow(0 0 40px rgba(168,85,247,.35));
   animation: float 6s ease-in-out infinite;
 }
