@@ -162,10 +162,16 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   font-weight: 900;
   font-size: 1.15rem;
   letter-spacing: .06em;
-  color: var(--chrome);
-  text-shadow: 0 0 10px rgba(200,212,208,.35);
+  /* chrome (A1) */
+  background: linear-gradient(180deg,#ffffff 0%,#dfeef0 18%,#9fb4bc 40%,#5c7078 52%,#c8dde3 62%,#ffffff 78%,#8fa6ad 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 1px 0 rgba(255,255,255,.3)) drop-shadow(0 1px 2px rgba(0,0,0,.7));
 }
-.brand-name .hq { color: var(--iridescent); text-shadow: var(--glow-green); }
+.brand-name .hq {
+  background: linear-gradient(180deg,#eafff6 0%,#7ef0c0 30%,#26d8e8 55%,#1a9fb0 70%,#8ffbe0 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  text-shadow: none;
+}
 
 .brand-tag {
   display: block;
@@ -211,11 +217,17 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
 
 .hero h1 {
   font-size: clamp(2.2rem, 6vw, 4rem);
-  color: var(--chrome);
-  text-shadow: 0 0 18px rgba(200,212,208,.4);
   margin: 0 0 .4rem;
+  /* chrome (A1) */
+  background: linear-gradient(180deg,#ffffff 0%,#dfeef0 18%,#9fb4bc 40%,#5c7078 52%,#c8dde3 62%,#ffffff 78%,#8fa6ad 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 2px 0 rgba(255,255,255,.25)) drop-shadow(0 3px 4px rgba(0,0,0,.75));
 }
-.hero h1 .accent { color: var(--iridescent); text-shadow: var(--glow-green); }
+.hero h1 .accent {
+  background: linear-gradient(180deg,#eafff6 0%,#7ef0c0 30%,#26d8e8 55%,#1a9fb0 70%,#8ffbe0 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  text-shadow: none;
+}
 .hero .tagline {
   font-family: var(--font-western);
   text-transform: uppercase;
