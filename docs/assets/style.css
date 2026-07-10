@@ -158,7 +158,7 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
 
 .brand-title {
   display: block;
-  height: 150px;
+  height: 75px;
   width: auto;
   max-width: none;
 }
