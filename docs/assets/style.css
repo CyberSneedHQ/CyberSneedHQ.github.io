@@ -5,7 +5,14 @@
 
 /* ---- Fonts ---- */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Oswald:wght@300;500;700&family=Rajdhani:wght@400;500;600;700&display=swap');
-
+@font-face {
+    font-family: 'Planet Kosmos';
+    src: url('./fonts/PlanetKosmos.woff2') format('woff2'),
+         url('./fonts/PlanetKosmos.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 /* ============================================================
    1. TOKENS
    ============================================================ */
@@ -39,6 +46,8 @@
   --font-western: 'Oswald', sans-serif;      /* condensed cowboy flavor */
   --font-body:    'Rajdhani', sans-serif;    /* Y2K-tech body */
 
+  --font-y2k-chrome: 'Planet Kosmos', sans-serif;
+   
   --radius: 10px;
   --maxw: 1180px;
 }
@@ -112,6 +121,44 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   letter-spacing: .35em;
   font-size: .8rem;
   color: var(--chrome-dim);
+}
+
+/* ADD THIS RIGHT HERE: Perfect Liquid Chrome styling using our variables */
+.y2k-chrome-perfect {
+    font-family: var(--font-y2k-chrome);
+    font-size: clamp(3rem, 8vw, 6rem); /* Responsive sizing so it doesn't break mobile */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 20px;
+    display: inline-block;
+    
+    /* Aggressive Y2K italics distortion */
+    transform: skewX(-12deg); 
+
+    /* High-contrast metallic liquid gradient */
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0%,
+        #e5e5e5 35%,
+        #b0b0b0 44%,
+        #0a0a0a 46%, /* The sharp 'horizon line' mirror effect */
+        #575757 49%,
+        #efefef 55%,
+        #9c9c9c 75%,
+        #111111 100%
+    );
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    /* Links the text directly to the SVG filter in your index.html */
+    filter: url(#perfection-chrome-filter) drop-shadow(0 4px 15px rgba(0,0,0,0.7));
+    
+    /* Forces high-quality hardware acceleration rendering in Chrome */
+    -webkit-font-smoothing: antialiased;
+    backface-visibility: hidden;
 }
 
 /* ============================================================
