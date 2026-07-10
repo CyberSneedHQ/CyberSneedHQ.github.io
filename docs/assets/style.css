@@ -4,7 +4,7 @@
    ============================================================ */
 
 /* ---- Fonts ---- */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Oswald:wght@300;500;700&family=Rajdhani:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Oswald:wght@300;500;700&family=Rajdhani:wght@400;500;600;700&family=Titan+One&display=swap');
 
 /* ============================================================
    1. TOKENS
@@ -143,13 +143,20 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   font-weight: 900;
   font-size: 1.15rem;
   letter-spacing: .06em;
-  /* chrome (A1) */
-  background: linear-gradient(180deg,#ffffff 0%,#dfeef0 18%,#9fb4bc 40%,#5c7078 52%,#c8dde3 62%,#ffffff 78%,#8fa6ad 100%);
+  /* liquid chrome (clean, no warp at small size) */
+  background: linear-gradient(180deg,
+    #ffffff 0%, #dff4f9 10%, #9fc2cc 26%, #ffffff 36%,
+    #55707a 46%, #16262c 50%,
+    #cfe9ef 53%, #f2fdff 63%,
+    #86a2ab 80%, #ffffff 92%, #7e959c 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
   filter: drop-shadow(0 1px 0 rgba(255,255,255,.3)) drop-shadow(0 1px 2px rgba(0,0,0,.7));
 }
 .brand-name .hq {
-  background: linear-gradient(180deg,#eafff6 0%,#7ef0c0 30%,#26d8e8 55%,#1a9fb0 70%,#8ffbe0 100%);
+  background: linear-gradient(180deg,
+    #eafff9 0%, #8ff5cf 18%, #3ef0a8 34%, #ffffff 42%,
+    #0f7d8c 49%, #062e34 52%,
+    #7ee8d8 56%, #c9fff2 68%, #26d8e8 86%, #eafff9 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
   text-shadow: none;
 }
@@ -197,17 +204,46 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
 @keyframes float { 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-10px);} }
 
 .hero h1 {
-  font-size: clamp(2.2rem, 6vw, 4rem);
+  /* L3: liquid chrome — bubble font + molten warp */
+  font-family: 'Titan One', var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 5.5vw, 3.8rem);
+  letter-spacing: .01em;
   margin: 0 0 .4rem;
-  /* chrome (A1) */
-  background: linear-gradient(180deg,#ffffff 0%,#dfeef0 18%,#9fb4bc 40%,#5c7078 52%,#c8dde3 62%,#ffffff 78%,#8fa6ad 100%);
+  position: relative;
+  z-index: 0;
+  background: linear-gradient(180deg,
+    #ffffff 0%, #dff4f9 10%, #9fc2cc 26%, #ffffff 36%,
+    #55707a 46%, #16262c 50%,
+    #cfe9ef 53%, #f2fdff 63%,
+    #86a2ab 80%, #ffffff 92%, #7e959c 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
-  filter: drop-shadow(0 2px 0 rgba(255,255,255,.25)) drop-shadow(0 3px 4px rgba(0,0,0,.75));
+  filter: url(#molten) drop-shadow(0 4px 6px rgba(0,0,0,.75));
 }
 .hero h1 .accent {
-  background: linear-gradient(180deg,#eafff6 0%,#7ef0c0 30%,#26d8e8 55%,#1a9fb0 70%,#8ffbe0 100%);
+  background: linear-gradient(180deg,
+    #eafff9 0%, #8ff5cf 18%, #3ef0a8 34%, #ffffff 42%,
+    #0f7d8c 49%, #062e34 52%,
+    #7ee8d8 56%, #c9fff2 68%, #26d8e8 86%, #eafff9 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
   text-shadow: none;
+}
+/* rounded top lip highlight */
+.hero h1::after {
+  content: attr(data-text);
+  position: absolute; left: 0; top: 0; width: 100%;
+  background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,0) 42%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  transform: translateY(-1.5px);
+  pointer-events: none;
+}
+/* molten depth shadow */
+.hero h1::before {
+  content: attr(data-text);
+  position: absolute; left: 0; top: 0; width: 100%;
+  z-index: -1; color: #000; opacity: .55;
+  transform: translateY(5px) scaleY(.98);
+  filter: blur(5px);
 }
 .hero .tagline {
   font-family: var(--font-western);
