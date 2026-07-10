@@ -27,7 +27,7 @@
   </header>
   <section class="hero">
     <img class="badge" src="assets/logo_badge.png" alt="CyberSneedHQ sheriff badge" />
-    <h1>CYBERSNEED<span class="accent">HQ</span></h1>
+    <h1 class="y2k-chrome-perfect">CYBERSNEEDHQ</h1>
     <p class="tagline">Home of the Cyber Space Cowboy</p>
   </section>
 
@@ -84,4 +84,26 @@
     <p>&copy; 2026 CyberSneedHQ &mdash; Hunter Sneed</p>
     <span class="eyebrow">The Cyber Space Cowboy</span>
   </footer>
-</body></html>
+
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+    <defs>
+      <filter id="perfection-chrome-filter" x="-20%" y="-20%" width="140%" height="140%">
+        <!-- 1. Melt the font edges slightly into organic fluid drips -->
+        <feGaussianBlur stdDeviation="3" result="blur" />
+        <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="liquid-shape" />
+        
+        <!-- 2. Calculate specular highlights for the 3D chrome sheen -->
+        <feSpecularLighting surfaceScale="5" specularConstant="2.5" specularExponent="30" lighting-color="#ffffff" in="liquid-shape" result="specular-light">
+          <feDistantLight azimuth="235" elevation="55" />
+        </feSpecularLighting>
+        
+        <!-- 3. Mask the lighting inside the text boundary -->
+        <feComposite in="specular-light" in2="liquid-shape" operator="in" result="chrome-sheen" />
+        
+        <!-- 4. Blend the 3D reflections over our CSS chrome gradient background -->
+        <feBlend mode="screen" in="chrome-sheen" in2="SourceGraphic" />
+      </filter>
+    </defs>
+  </svg>
+</body>
+</html>
