@@ -170,7 +170,11 @@ a:hover { color: var(--aqua); text-shadow: var(--glow-aqua); }
   font-size: .62rem;
   letter-spacing: .28em;
   text-transform: uppercase;
-  color: var(--chrome-dim);
+  background: linear-gradient(90deg, #3ef0a8 0%, #26d8e8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .site-nav { margin-left: auto; display: flex; gap: .35rem; flex-wrap: wrap; flex-shrink: 0; }
